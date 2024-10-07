@@ -1,0 +1,166 @@
+/* Styles généraux pour le corps */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Styles pour le contenu principal */
+section#admin {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les titres */
+h2 {
+    color: #333;
+}
+
+/* Styles pour le formulaire */
+form {
+    margin-bottom: 20px;
+}
+
+/* Styles pour les labels et les champs de formulaire */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styles pour le bouton */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Styles pour le menu de navigation */
+nav ul {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding */
+    margin: 0; /* Supprime la marge */
+    display: flex; /* Utilise flexbox pour un alignement horizontal */
+    justify-content: center; /* Centre le menu horizontalement */
+}
+
+nav li {
+    margin: 0 15px; /* Ajoute de l'espace entre les éléments */
+}
+
+nav a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #fff; /* Couleur du texte des liens */
+    padding: 10px 15px; /* Ajoute un peu de padding pour le clic */
+    border-radius: 5px; /* Bords arrondis */
+    transition: background-color 0.3s; /* Transition fluide au survol */
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+/* Nouvelle mise en forme pour la liste des documents téléversés */
+.documents-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Supprime le padding */
+    margin: 0; /* Supprime la marge */
+}
+
+/* Styles pour le conteneur des catégories de documents */
+.documents-category {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonnes de taille flexible */
+    gap: 20px; /* Espacement entre les éléments */
+    margin-top: 10px; /* Marge au-dessus de chaque catégorie */
+}
+
+/* Styles pour chaque document dans la liste */
+.document-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px; /* Ajusté pour un meilleur espacement */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Ajout d'une transition pour l'effet au survol */
+}
+
+/* Effet de survol pour chaque document */
+.document-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+/* Styles pour le titre et les informations du document */
+.document-title {
+    font-size: 1.5em; /* Plus grand pour mieux ressortir */
+    margin-bottom: 5px;
+    color: #333; /* Couleur légèrement plus foncée */
+    font-weight: bold; /* Gras pour plus d'impact */
+}
+
+/* Styles pour les métadonnées des documents */
+.document-meta {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px; /* Marge au-dessous des métadonnées */
+}
+
+/* Styles pour la description des documents */
+.document-description {
+    font-size: 1em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px; /* Marge au-dessous de la description */
+}
+
+/* Styles pour les actions sur les documents */
+.document-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px; /* Plus d'espace au-dessus des actions */
+}
+
+.document-actions a {
+    background-color: #28a745; /* Vert pour indiquer une action positive */
+    color: white;
+    padding: 10px 15px; /* Plus d'espace pour le bouton */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transition plus fluide */
+}
+
+.document-actions a:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+}
+      

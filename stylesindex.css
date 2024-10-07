@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('aplan.jpg'); /* L'image de fond */
+    background-size: cover; /* Pour couvrir toute la page */
+    background-position: center; /* Centrer l'image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh; /* Occuper toute la hauteur de la page */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposition sombre avec opacité de 50% */
+    z-index: 0; /* Assurer que l'overlay est en arrière-plan */
+}
+
+/* Le header reste en haut à gauche */
+.header {
+    position: absolute; /* Positionner le header indépendamment du formulaire */
+    top: 10px;
+    left: 10px;
+    text-align: left; /* Aligner à gauche */
+    z-index: 1; /* S'assurer que le header soit au-dessus de l'overlay */
+}
+
+.logo {
+    border-radius: 50px;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+}
+h1 {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+/* Conteneur pour centrer le formulaire */
+#form_container, #recuperation_form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec une légère transparence */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-top: 80px; /* Augmente cette valeur si nécessaire */
+    z-index: 1; /* Formulaire au-dessus de l'overlay */
+}
+
+input[type="text"], input[type="tel"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Styles pour le champ select du niveau d'étude */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+    appearance: none; /* Supprime le style par défaut du select */
+    background-image: url('chevron-down.svg'); /* Icône personnalisée pour le select */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Positionner l'icône */
+    background-size: 16px;
+}
+
+select:focus {
+    border-color: #4CAF50; /* Couleur verte lors du focus */
+    outline: none; /* Supprime le contour par défaut */
+}
+
+option {
+    font-size: 1em;
+}
